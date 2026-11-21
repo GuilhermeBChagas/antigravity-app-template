@@ -1,0 +1,10 @@
+{
+  "name": "Antigravity App",
+  "short_name": "Antigravity",
+  "description": "Aplicação web responsiva e segura.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#0f172a",
+  "icons": []
+}

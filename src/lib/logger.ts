@@ -23,4 +23,3 @@ export const logger = {
     this[level](scope, message, meta);
   },
 };
-

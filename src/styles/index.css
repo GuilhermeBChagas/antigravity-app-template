@@ -3,6 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   --color-surface: var(--bg-surface);
   --color-surface-elevated: var(--bg-surface-elevated);
   --color-surface-muted: var(--bg-surface-muted);
@@ -30,12 +32,12 @@
 }
 
 .dark {
-  --bg-surface: #020617;
-  --bg-surface-elevated: #0f172a;
-  --bg-surface-muted: #1e293b;
+  --bg-surface: #070b14;
+  --bg-surface-elevated: #0f1623;
+  --bg-surface-muted: #182235;
   --text-content: #f8fafc;
   --text-content-muted: #94a3b8;
-  --border-color: #1e293b;
+  --border-color: rgba(148, 163, 184, 0.16);
   --brand-primary: #3b82f6;
   --brand-primary-foreground: #ffffff;
 }
@@ -43,6 +45,7 @@
 @layer base {
   html {
     color-scheme: light;
+    font-family: var(--font-sans);
   }
 
   html.dark {
@@ -53,6 +56,11 @@
     background-color: var(--bg-surface);
     color: var(--text-content);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  code,
+  pre {
+    font-family: var(--font-mono);
   }
 
   /* Garante que :hover não fique preso em dispositivos de toque */
@@ -74,4 +82,3 @@
     scroll-behavior: auto !important;
   }
 }
-

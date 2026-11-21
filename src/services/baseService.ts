@@ -14,4 +14,3 @@ export function getPaginationRange(page: number, pageSize = 20): { from: number;
 export function getDb() {
   return getSupabaseClient();
 }
-

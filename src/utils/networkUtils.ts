@@ -14,4 +14,3 @@ export function isNetworkError(error: unknown): boolean {
   const msg = getErrorMessage(error, '').toLowerCase();
   return msg.includes('failed to fetch') || msg.includes('network') || msg.includes('offline');
 }
-

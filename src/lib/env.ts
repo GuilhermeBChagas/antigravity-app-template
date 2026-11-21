@@ -15,4 +15,3 @@ if (!parsed.success) {
 
 /** Variáveis de ambiente públicas validadas com Zod. */
 export const env = parsed.data;
-

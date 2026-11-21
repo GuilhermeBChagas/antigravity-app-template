@@ -14,6 +14,11 @@ const ItemsPage = lazy(() =>
 const SettingsPage = lazy(() =>
   import('@/pages/SettingsPage').then((m) => ({ default: m.SettingsPage }))
 );
+const AdminPermissionsPage = lazy(() =>
+  import('@/features/admin/components/AdminPermissionsPage').then((m) => ({
+    default: m.AdminPermissionsPage,
+  }))
+);
 const ForbiddenPage = lazy(() =>
   import('@/pages/ForbiddenPage').then((m) => ({ default: m.ForbiddenPage }))
 );
@@ -69,6 +74,16 @@ export const router = createBrowserRouter([
           <LazyRoute>
             <RequirePermission permission="settings.read">
               <SettingsPage />
+            </RequirePermission>
+          </LazyRoute>
+        ),
+      },
+      {
+        path: 'admin/permissoes',
+        element: (
+          <LazyRoute>
+            <RequirePermission permission="admin.roles.manage">
+              <AdminPermissionsPage />
             </RequirePermission>
           </LazyRoute>
         ),

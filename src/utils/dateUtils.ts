@@ -27,4 +27,3 @@ export function formatDateTimeBR(value: string | Date | null | undefined): strin
   if (Number.isNaN(date.getTime())) return '—';
   return brDateTimeFormatter.format(date);
 }
-

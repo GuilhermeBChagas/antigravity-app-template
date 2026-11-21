@@ -28,4 +28,3 @@ export function ScrollToTopButton() {
 }
 
 ScrollToTopButton.displayName = 'ScrollToTopButton';
-

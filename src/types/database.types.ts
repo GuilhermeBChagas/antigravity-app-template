@@ -32,6 +32,80 @@ export interface Database {
         };
         Relationships: [];
       };
+      roles: {
+        Row: {
+          id: string;
+          slug: string;
+          name: string;
+          description: string | null;
+          is_system: boolean;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          slug: string;
+          name: string;
+          description?: string | null;
+          is_system?: boolean;
+          created_at?: string;
+        };
+        Update: {
+          slug?: string;
+          name?: string;
+          description?: string | null;
+        };
+        Relationships: [];
+      };
+      permissions: {
+        Row: {
+          id: string;
+          key: string;
+          module: string;
+          description: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          key: string;
+          module: string;
+          description: string;
+          created_at?: string;
+        };
+        Update: {
+          key?: string;
+          module?: string;
+          description?: string;
+        };
+        Relationships: [];
+      };
+      role_permissions: {
+        Row: {
+          role_id: string;
+          permission_id: string;
+          created_at: string;
+        };
+        Insert: {
+          role_id: string;
+          permission_id: string;
+          created_at?: string;
+        };
+        Update: Record<string, never>;
+        Relationships: [];
+      };
+      user_roles: {
+        Row: {
+          user_id: string;
+          role_id: string;
+          created_at: string;
+        };
+        Insert: {
+          user_id: string;
+          role_id: string;
+          created_at?: string;
+        };
+        Update: Record<string, never>;
+        Relationships: [];
+      };
       example_items: {
         Row: {
           id: string;
@@ -81,4 +155,3 @@ export interface Database {
     CompositeTypes: Record<string, never>;
   };
 }
-

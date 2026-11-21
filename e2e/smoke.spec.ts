@@ -5,4 +5,3 @@ test('carrega aplicação e redireciona para login quando não autenticado', asy
   await expect(page).toHaveURL(/\/login|\/$/);
   await expect(page.locator('body')).toBeVisible();
 });
-

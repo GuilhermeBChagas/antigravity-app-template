@@ -6,4 +6,3 @@ export const appConfig = {
   version: '1.0.0',
   defaultLocale: 'pt-BR',
 } as const;
-

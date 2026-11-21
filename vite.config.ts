@@ -13,6 +13,18 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-supabase': ['@supabase/supabase-js'],
+          'vendor-motion': ['motion'],
+          'vendor-ui': ['lucide-react', 'sonner', 'zod', 'clsx', 'tailwind-merge'],
+        },
+      },
+    },
+  },
   test: {
     environment: 'jsdom',
     globals: true,

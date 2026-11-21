@@ -10,4 +10,3 @@ export function useDisclosure(initialOpen = false) {
 
   return { isOpen, open, close, toggle, setIsOpen };
 }
-

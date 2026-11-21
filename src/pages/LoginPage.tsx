@@ -41,10 +41,14 @@ export function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-dvh items-center justify-center bg-surface p-4">
-      <Card className="w-full max-w-md p-6 sm:p-8">
+    <div className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-surface p-4">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-40 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/12 blur-3xl"
+      />
+      <Card className="relative w-full max-w-md p-6 sm:p-8 shadow-xl">
         <div className="mb-6 text-center">
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground text-lg font-bold">
+          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground text-lg font-bold shadow-sm">
             A
           </div>
           <h1 className="text-xl font-bold tracking-tight">{appConfig.name}</h1>

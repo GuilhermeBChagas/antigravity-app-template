@@ -15,4 +15,3 @@ export function AppLoadingScreen({ message = 'Carregando aplicação...' }: AppL
 }
 
 AppLoadingScreen.displayName = 'AppLoadingScreen';
-

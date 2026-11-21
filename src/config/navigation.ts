@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { LayoutDashboard, ListChecks, Settings } from 'lucide-react';
+import { LayoutDashboard, ListChecks, Settings, Shield } from 'lucide-react';
 
 export interface NavItem {
   id: string;
@@ -35,5 +35,11 @@ export const navigationItems: NavItem[] = [
     icon: Settings,
     permission: 'settings.read',
   },
+  {
+    id: 'admin-permissions',
+    label: 'Permissões',
+    to: '/admin/permissoes',
+    icon: Shield,
+    permission: 'admin.roles.manage',
+  },
 ];
-

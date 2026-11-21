@@ -19,4 +19,3 @@ export function hasAccess(context: AccessContext, requiredPermission?: string): 
   }
   return context.permissions.includes(requiredPermission);
 }
-
