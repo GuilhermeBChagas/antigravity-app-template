@@ -22,3 +22,4 @@ Guia de referência rápida para manter consistência visual em todas as telas c
 - Entradas de modais usam transição curta (`0.16s–0.20s`) com curva `[0.22, 1, 0.36, 1]`.
 - Abas segmentadas usam `layoutId` com mola rápida (`stiffness: 420, damping: 32`).
 - Botões usam micro-feedback tátil (`active:scale-[0.98]`).
+
