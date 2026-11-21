@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-surface: var(--bg-surface);
+  --color-surface-elevated: var(--bg-surface-elevated);
+  --color-surface-muted: var(--bg-surface-muted);
+  --color-content: var(--text-content);
+  --color-content-muted: var(--text-content-muted);
+  --color-border: var(--border-color);
+  --color-primary: var(--brand-primary);
+  --color-primary-foreground: var(--brand-primary-foreground);
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --radius-card: 1rem;
+  --radius-modal: 1.5rem;
+}
+
+:root {
+  --bg-surface: #f8fafc;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-muted: #f1f5f9;
+  --text-content: #0f172a;
+  --text-content-muted: #475569;
+  --border-color: #e2e8f0;
+  --brand-primary: #2563eb;
+  --brand-primary-foreground: #ffffff;
+}
+
+.dark {
+  --bg-surface: #020617;
+  --bg-surface-elevated: #0f172a;
+  --bg-surface-muted: #1e293b;
+  --text-content: #f8fafc;
+  --text-content-muted: #94a3b8;
+  --border-color: #1e293b;
+  --brand-primary: #3b82f6;
+  --brand-primary-foreground: #ffffff;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-surface);
+    color: var(--text-content);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Garante que :hover não fique preso em dispositivos de toque */
+  @media (hover: none) {
+    .hover-only:hover {
+      background-color: inherit;
+      color: inherit;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
