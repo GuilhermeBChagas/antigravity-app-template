@@ -22,4 +22,17 @@ Guia de referência rápida para manter consistência visual em todas as telas c
 - Entradas de modais usam transição curta (`0.16s–0.20s`) com curva `[0.22, 1, 0.36, 1]`.
 - Abas segmentadas usam `layoutId` com mola rápida (`stiffness: 420, damping: 32`).
 - Botões usam micro-feedback tátil (`active:scale-[0.98]`).
+- **Restrição por frequência:** ações de teclado, filtros rápidos e interações executadas dezenas/centenas de vezes ao dia não recebem animações lentas ou decorativas (use `transform`/`opacity` e `< 300ms`).
+
+## Leis de UX Fundamentais
+- **Jakob:** preserve padrões consolidados de navegação, busca, filtros e ícones.
+- **Fitts:** ações primárias grandes e acessíveis na zona do polegar no mobile (`>= 44x44px`).
+- **Hick:** 1 ação primária clara por tela/modal; reduza escolhas concorrentes com progressive disclosure.
+- **Miller:** agrupe informações em blocos visuais curtos e escaneáveis (chunking).
+- **Postel:** formulários tolerantes na entrada (máscaras/normalização) com feedback claro de erro.
+
+## Preferências Aprendidas (`learn-taste`)
+> Ao final de sessões de ajuste visual, use a skill `learn-taste` para registrar abaixo regras específicas e seu motivo neste projeto.
+
+*(Nenhuma regra específica registrada ainda.)*
 
